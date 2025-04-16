@@ -61,7 +61,7 @@ def run_search(user_input, model):
 # ------------------------
 # 🌐 Streamlit UI
 # ------------------------
-st.title("🎓 YouTube Semantic Search")
+st.title("YouTube Semantic Search")
 st.write("Search for educational YouTube videos using natural language.")
 
 user_input = st.text_input("🔎 What do you want to learn about?")
@@ -70,7 +70,7 @@ if user_input:
     model = load_model()
     results = run_search(user_input, model)
 
-    st.subheader("📺 Top Matching Videos")
+    st.subheader("Top Matching Videos")
     for r in results:
         video_id = r["video_id"]
         url = f"https://www.youtube.com/watch?v={video_id}"
