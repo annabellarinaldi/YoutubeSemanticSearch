@@ -71,6 +71,6 @@ if user_input:
     results = run_search(user_input, model)
 
     st.subheader("📺 Top Matching Videos")
-    for r in results:
-        url = f"https://www.youtube.com/watch?v={r['video_id']}"
-        st.markdown(f"- [{r['title']}]({url})")
+    url = f"https://www.youtube.com/watch?v={r['video_id']}"
+    st.markdown(f"**{r['title']}**")
+    st.video(url)
