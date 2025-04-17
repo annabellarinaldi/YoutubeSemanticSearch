@@ -48,7 +48,7 @@ def fetch_videos(query, use_transcripts):
 # ------------------------
 @st.cache_resource
 def load_model():
-    return SentenceTransformer("all-MiniLM-L6-v2")
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 # ------------------------
 # 🔢 Embed Texts
